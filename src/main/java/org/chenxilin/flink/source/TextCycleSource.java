@@ -52,6 +52,11 @@ public class TextCycleSource extends RichParallelSourceFunction<Map<String, Obje
                 lineMap.put(fieldKey, fields.get(fieldKey));
             }
 
+            // 调整字段
+            if (!config.getAdjustField().isEmpty()) {
+                lineMap.replace(config.getAdjustField(), System.currentTimeMillis());
+            }
+
             ctx.collect(lineMap);
         }
     }

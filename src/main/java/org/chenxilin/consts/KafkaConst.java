@@ -14,6 +14,7 @@ public class KafkaConst {
     public static final String TIME_KEY = "kafka.producer.time.key";
     public static final String TIME_FORMAT = "kafka.producer.time.format";
     public static final String ADDITIONAL_FIELDS = "kafka.producer.additionalFields";
+    public static final String ADJUST_FIELD = "kafka.producer.adjustField";
 
     public static final int DEFAULT_PARALLELISM = 1;
     public static final String DEFAULT_SERVERS = "127.0.0.1:9092";
@@ -26,4 +27,5 @@ public class KafkaConst {
     public static final String DEFAULT_TIME_KEY = "ingestTime";
     public static final String DEFAULT_TIME_FORMAT = "yyyy/MM/dd HH:mm:ss.SSS";
     public static final String DEFAULT_ADDITIONAL_FIELDS = "{}";
+    public static final String DEFAULT_ADJUST_FIELD = "";
 }

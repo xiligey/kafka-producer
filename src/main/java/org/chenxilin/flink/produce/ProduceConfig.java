@@ -58,6 +58,10 @@ public class ProduceConfig implements Serializable {
      * 例子：kafka.producer.additionalFields={"key1": "value1", "key2": "value2"}
      */
     private String additionalFields = "";
+    /**
+     * 调整字段
+     */
+    private String adjustField = "";
 
     /**
      * 构造器——读properties配置
@@ -73,5 +77,6 @@ public class ProduceConfig implements Serializable {
         this.timeKey = properties.getProperty(TIME_KEY, DEFAULT_TIME_KEY);
         this.timeFormat = properties.getProperty(TIME_FORMAT, DEFAULT_TIME_FORMAT);
         this.additionalFields = properties.getProperty(ADDITIONAL_FIELDS, DEFAULT_ADDITIONAL_FIELDS);
+        this.adjustField = properties.getProperty(ADJUST_FIELD, DEFAULT_ADJUST_FIELD);
     }
 }

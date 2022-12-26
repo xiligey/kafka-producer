@@ -18,6 +18,7 @@ import java.util.Properties;
  */
 public class Main {
     public static void main(String[] args) throws Exception {
+        System.out.println(System.currentTimeMillis());
         Properties properties = PropertiesHelper.readPropertiesFile(args[0]);
         ProduceConfig myKafkaProducerConfig = new ProduceConfig(properties);
         int parallelism = myKafkaProducerConfig.getJobParallelism();
